@@ -4,12 +4,21 @@
 ## Terraform configuration
 
 terraform {
+
+  cloud {
+    organization = "SOW-CorpInternational"
+    workspaces {
+      name = "learn-terraform-migrate"
+    }
+  }
+
   required_providers {
     random = {
       source  = "hashicorp/random"
       version = "3.3.2"
     }
   }
+  
   required_version = ">= 1.1.0"
 }
 
